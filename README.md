@@ -1,7 +1,7 @@
 # soak-up (🧽) [TODO]
 
 
-Absorb temporary light children into the upgraded schema
+Absorb temporary light children into the upgraded Web Components, for those who insist that web components should be 100% progressive enhancement compatible.
 
 ```html
 <form>
