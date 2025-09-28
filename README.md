@@ -7,15 +7,16 @@ Absorb temporary light children into the upgraded schema
 <form>
     <fieldset itemscope disabled name=tasks>
         <scratch-box enh-soak-up="
-            name, checked as value from #{{createDemo}}.
+            name, checked as value
+               from #{{createDemo}}.
         "
             enh-be-importing=scratch-box/root.mjs>
             <label data-id="{{| createDemoLabel}}">Create demo<label>
             <input data-id="{{@ createDemo}}" type=checkbox>
                 
             <span slot=labelTxt soak-up="
-                textContent, #{{createDemoLabel}}?.textContent to ?.textContent.
-                #{{createDemoLabel}}[itemprop] to [itemprop].
+                textContent, itemprop
+                    from #{{createDemoLabel}}.
             "></span>
         </scratch-box>
         <scratch-box disabled enh-soak-up="
