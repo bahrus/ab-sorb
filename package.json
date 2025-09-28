@@ -14,7 +14,20 @@
   "author": "Bruce B. Anderson <anderson.bruce.b@gmail.com>",
   "type": "module",
   "main": "soak-up.js",
+    "dependencies": {
+    "be-enhanced": "0.0.188",
+    "be-hive": "0.0.266",
+    "mount-observer": "0.0.105",
+    "trans-render": "0.0.959"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.1",
+    "spa-ssi": "0.0.23"
+  },
   "scripts": {
-    "test": "test Playwright"
+    "test": "playwright test",
+    "serve": "node ./node_modules/spa-ssi/serve.js",
+    "safari": "npx playwright wk http://localhost:8000",
+    "update": "ncu -u && npm install"
   }
 }
