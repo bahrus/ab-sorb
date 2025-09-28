@@ -13,8 +13,11 @@ In this example, [*scratch-box*](https://github.com/bahrus/scratch-box) is a fan
                from #{{createDemo}}
         "
             enh-be-importing=scratch-box/root.mjs>
+
+            <!-- These temporary elements serve as functional stand-in while web component loads-->
             <label data-id="{{| createDemoLabel}}">Create demo<label>
             <input data-id="{{@ createDemo}}" type=checkbox>
+            <!-- End of temporary elements -->
                 
             <span slot=labelTxt soak-up="
                 textContent, itemprop
