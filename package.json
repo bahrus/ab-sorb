@@ -1,0 +1,20 @@
+{
+  "name": "ab-sorb",
+  "version": "0.0.0",
+  "description": "Absorb temporary light children into the upgraded schema",
+  "homepage": "https://github.com/bahrus/ab-sorb#readme",
+  "bugs": {
+    "url": "https://github.com/bahrus/ab-sorb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/ab-sorb.git"
+  },
+  "license": "MIT",
+  "author": "Bruce B. Anderson <anderson.bruce.b@gmail.com>",
+  "type": "module",
+  "main": "ab-sorb.js",
+  "scripts": {
+    "test": "test Playwright"
+  }
+}
