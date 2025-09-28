@@ -42,3 +42,9 @@ Absorb temporary light children into the upgraded Web Components, for those who 
 
 </form>
 ```
+
+What this does:
+
+1.  Does nothing until scratch-box is defined as a custom element.
+2.  Allows the user to make changes to the value of the build-in input / type=checkbox while waiting for the scratch-box elements to upgrade.
+3.  Once the upgrade has happened, absorbs the values of checked and name into the scratch-box element, and deletes the input element.  Absorbs the textContent and itemprop values of the label element, then deletes the label element.
