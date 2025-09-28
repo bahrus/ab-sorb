@@ -3,6 +3,8 @@
 
 Absorb temporary light children into the upgraded Web Components, for those who insist that web components should be 100% progressive enhancement compatible.
 
+In this example, [*scratch-box*](https://github.com/bahrus/scratch-box) is a fancy looking checkbox-like web component.
+
 ```html
 <form>
     <fieldset itemscope disabled name=tasks>
