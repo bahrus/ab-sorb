@@ -25,17 +25,18 @@ Absorb temporary light children into the upgraded schema
             ">
             <label data-id="{{| writeArticleLabel}}">Write article</label>
             <input data-id="{{@ writeArticle}}" type=checkbox>
-                
             
             <span slot=labelTxt soak-up="
-               textContent, itemprop from #{{writeArticleLabel}}"></span>
+               textContent, itemprop 
+               from #{{writeArticleLabel}}"></span>
         </scratch-box>
-        <scratch-box enh-soak-up="name and value from #{{exercise}}">
-            <label>
-                <input data-id="{{@ exercise}}" type=checkbox>
-                Exercise
-            </label>
-            <span -id slot=labelTxt soak-up="textContent from #{{exercise}}?.nextElement"></span>
+        <scratch-box enh-soak-up="
+            name, checked as value 
+               from #{{exercise}}">
+            <label data-for={{exercise}}>Exercise</label>
+            <input data-id="{{@ exercise}}" type=checkbox>
+            <span -id slot=labelTxt soak-up="
+                textContent, itemprop from #{{exercise}}"></span>
         </scratch-box>
     </fieldset>
 
