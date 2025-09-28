@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bahrus/ab-sorb.git"
+    "url": "git+https://github.com/bahrus/soak-up.git"
   },
   "license": "MIT",
   "author": "Bruce B. Anderson <anderson.bruce.b@gmail.com>",
   "type": "module",
-  "main": "ab-sorb.js",
+  "main": "soak-up.js",
   "scripts": {
     "test": "test Playwright"
   }
