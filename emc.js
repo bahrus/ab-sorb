@@ -3,7 +3,7 @@ import { BeHive, MountObserver, seed } from 'be-hive/be-hive.js';
 /** @import {AP} from './ts-refs/soak-up/types'; */
 /** @import {EMC} from './ts-refs/trans-render/be/types' */
 
-const targetPropsFromSourceSpecifier = String.raw `^(?<targetProps>.*) from (?<sourceSpecifier>.*)`;
+const propMapFromSourceSpecifier = String.raw `^(?<propMap>.*) from (?<sourceSpecifier>.*)`;
 
 /**
  * @type {EMC<any, AP>}
@@ -17,7 +17,7 @@ export const emc = {
             regExpExts: {
                 soakUpRules: [
                     {
-                        regExp: targetPropsFromSourceSpecifier,
+                        regExp: propMapFromSourceSpecifier,
                         defaultVals: {},
                         dssKeys: [['sourceSpecifierString', 'sourceSpecifier']],
                     }

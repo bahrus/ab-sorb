@@ -16,6 +16,8 @@ class SoakUp extends BE {
     static config = {
         propInfo: {
             ...propInfo,
+            soakUpRules: {},
+            fullyParsed: {},
         },
         positractions: [resolved, rejected],
     };
