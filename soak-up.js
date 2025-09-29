@@ -59,6 +59,25 @@ class SoakUp extends BE {
      * @returns 
      */
     async hydrate(self){
+        const {soakUpRules, enhancedElement} = self;
+        // find the web component
+        const wc = enhancedElement.slot ? enhancedElement.parentElement : enhancedElement;
+        if(wc === null) throw 404;
+        const {localName} = wc;
+        if(!localName.includes('-')) throw 404;
+        await customElements.whenDefined(localName);
+        const {find} = await import('trans-render/dss/find.js');
+        for(const rule of soakUpRules){
+            const {sourceSpecifier} = rule;
+            const source = await find(enhancedElement, sourceSpecifier);
+            if(!(source instanceof Element)) continue;
+            const {parsedPropMap} = rule;
+            
+            source.remove();
+            for(const {srcProp, destProp} of parsedPropMap){
+                /** @type {any} */(enhancedElement)[destProp || srcProp] = /** @type {any} */(source)[srcProp];
+            }
+        }
         return /** @type {PAP} */ ({
             resolved: true
         });
