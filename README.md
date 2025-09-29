@@ -1,4 +1,4 @@
-# soak-up (🧽) [TODO]
+# soak-up (🧽) [WIP]
 
 
 Absorb temporary light children into the upgraded Web Components, for those who insist that web components should be 100% progressive enhancement compatible.
