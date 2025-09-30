@@ -50,10 +50,10 @@ In this example, [*scratch-box*](https://github.com/bahrus/scratch-box) is a fan
 What this does:
 
 1.  Does nothing until scratch-box is defined as a custom element.
-2.  Allows the user to make changes to the value of the build-in input / type=checkbox while waiting for the scratch-box elements to upgrade.
-3.  Once the upgrade has happened, absorbs the latest values of *checked* and *name* into the scratch-box element, and deletes the input element.  Absorbs the textContent and itemprop values of the label element, then deletes the label element.
+2.  Allows the user to make changes to the value of the built-in input / type=checkbox while waiting for the scratch-box elements to upgrade.
+3.  Once the upgrade has happened, absorbs the latest values of *checked* and *name* of the built-in input element into the scratch-box element, and deletes the input element.  Absorbs the textContent and itemprop values of the built-in label element, then deletes the label element.
 
-Using the emoji name.
+## Using the emoji name.
 
 This package contains an alternative name you can use for this enhancement (at the risk of conflicting with other libraries).
 
