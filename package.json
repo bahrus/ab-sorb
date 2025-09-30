@@ -1,6 +1,6 @@
 {
   "name": "soak-up",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "web-components",
     "web-component",
@@ -10,7 +10,7 @@
     "behavior"
   ],
   "description": "Absorb temporary light children into the upgraded schema",
-    "files": [
+  "files": [
     "*.js",
     "./ts-refs/soak-up/types.d.ts",
     "README.md"
