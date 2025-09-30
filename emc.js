@@ -3,7 +3,7 @@ import { BeHive, MountObserver, seed } from 'be-hive/be-hive.js';
 /** @import {AP} from './ts-refs/soak-up/types'; */
 /** @import {EMC} from './ts-refs/trans-render/be/types' */
 
-const propMapFromSourceSpecifier = String.raw `^(?<propMap>.*) from (?<sourceSpecifier>.*)`;
+const propMapFromSourceSpecifier = String.raw `^(?<propMap>.*) from (?<sourceSpecifierString>.*)`;
 
 /**
  * @type {EMC<any, AP>}

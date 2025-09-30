@@ -22,6 +22,11 @@ class SoakUp extends BE {
         positractions: [resolved, rejected],
         compacts:{
             when_soakUpRules_changes_call_fullyParse: 0,
+        },
+        actions: {
+            hydrate: {
+                ifAllOf: ['soakUpRules', 'fullyParsed'],
+            }
         }
     };
 
@@ -47,6 +52,7 @@ class SoakUp extends BE {
                     destProp
                 });
             }
+            rule.parsedPropMap = parsedPropMap;
         }
         return /** @type {PAP} */ ({
             fullyParsed: true

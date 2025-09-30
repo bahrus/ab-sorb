@@ -8,7 +8,7 @@ In this example, [*scratch-box*](https://github.com/bahrus/scratch-box) is a fan
 ```html
 <form>
     <fieldset itemscope disabled name=tasks>
-        <scratch-box enh-soak-up="
+        <scratch-box defer-enh-soak-up enh-soak-up="
             name, checked as value
                from #{{createDemo}}
         "
@@ -19,7 +19,7 @@ In this example, [*scratch-box*](https://github.com/bahrus/scratch-box) is a fan
             <input data-id="{{@ createDemo}}" type=checkbox>
             <!-- End of temporary elements -->
                 
-            <span slot=labelTxt soak-up="
+            <span slot=labelTxt defer-soak-up soak-up="
                 textContent, itemprop
                     from #{{createDemoLabel}}.
             "></span>
