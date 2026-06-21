@@ -1,6 +1,6 @@
 {
   "name": "soak-up",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "web-components",
     "web-component",
@@ -12,10 +12,10 @@
   "description": "Absorb temporary light children into the upgraded schema",
   "files": [
     "*.js",
-    "./ts-refs/soak-up/types.d.ts",
+    "./types/soak-up/types.d.ts",
     "README.md"
   ],
-  "types": "./ts-refs/soak-up/types.d.ts",
+  "types": "./types/soak-up/types.d.ts",
   "homepage": "https://github.com/bahrus/soak-up#readme",
   "bugs": {
     "url": "https://github.com/bahrus/soak-up/issues"
@@ -30,22 +30,23 @@
   "main": "soak-up.js",
   "module": "soak-up.js",
   "dependencies": {
-    "be-enhanced": "0.0.188",
-    "be-hive": "0.0.266",
-    "mount-observer": "0.0.105",
-    "trans-render": "0.0.960"
+    "be-hive": "0.1.15",
+    "mount-observer": "0.1.41",
+    "roundabout-lib": "0.0.23",
+    "nested-regex-groups": "0.0.7"
   },
   "exports": {
     "./*": "./*.js",
     "./soak-up.js": "./soak-up.js"
   },
   "devDependencies": {
-    "@playwright/test": "1.55.1",
-    "spa-ssi": "0.0.23"
+    "@playwright/test": "1.61.0",
+    "spa-ssi": "0.0.27"
   },
   "scripts": {
-    "test": "playwright test",
+    "build": "node emc.mjs > emc.json && node 🧽.mjs > 🧽.json",
     "serve": "node ./node_modules/spa-ssi/serve.js",
+    "test": "playwright test",
     "safari": "npx playwright wk http://localhost:8000",
     "update": "ncu -u && npm install"
   }

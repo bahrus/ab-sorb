@@ -1,0 +1,39 @@
+{
+    "enhConfig": {
+        "enhKey": "🧽",
+        "spawn": "soak-up/soak-up.js",
+        "withAttrs": {
+            "base": "🧽",
+            "_base": {
+                "mapsTo": "soakUpRules",
+                "parser": "parse-pattern-statements",
+                "instanceOf": "Array",
+                "parserConfig": [
+                    {
+                        "name": "propMapFromSource",
+                        "pattern": "^(?<propMap>.*) from (?<sourceSpecifierString>.*)",
+                        "description": "Property mappings from a source element specifier"
+                    }
+                ]
+            }
+        }
+    },
+    "customData": {
+        "weakRef": {
+            "properties": [
+                "enhancedElement"
+            ]
+        },
+        "compacts": {
+            "when_soakUpRules_changes_call_fullyParse": 0
+        },
+        "actions": {
+            "hydrate": {
+                "ifAllOf": [
+                    "parsedRules",
+                    "enhancedElement"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soak Up Test</title>
+    <!-- #include virtual="/imports.html" -->
+    <be-hive>
+        <script type=emc-parser 
+                src="be-hive/parsers/parse-pattern-statements.js" 
+                parser-name=parse-pattern-statements></script>
+        <script type=emc 
+                src="soak-up/emc.json" 
+                wait-for-parsers=parse-pattern-statements></script>
+    </be-hive>
+    <script type=module>
+        import 'be-hive/be-hive.js';
+    </script>
+</head>
+<body>
+    <div itemscope>
+        <test-el>
+            <span soak-up="textContent from #{{source}}"></span>
+            <label data-id="{{| source}}">Hello World</label>
+        </test-el>
+    </div>
+    <div id=target></div>
+    <script>
+        setTimeout(() => {
+            customElements.define('test-el', class extends HTMLElement{});
+            setTimeout(() => {
+                const span = document.querySelector('test-el span');
+                if(span && span.textContent === 'Hello World'){
+                    target.setAttribute('mark', 'good');
+                }
+            }, 500);
+        }, 500);
+    </script>
+</body>
+</html>
