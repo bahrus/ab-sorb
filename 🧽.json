@@ -14,7 +14,10 @@
                         "pattern": "^(?<propMap>.*) from (?<sourceSpecifierString>.*)",
                         "description": "Property mappings from a source element specifier"
                     }
-                ]
+                ],
+                "parserOptions": {
+                    "normalizeWhitespace": true
+                }
             }
         }
     },
