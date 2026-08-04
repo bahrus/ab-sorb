@@ -32,11 +32,11 @@
   "main": "soak-up.js",
   "module": "soak-up.js",
   "dependencies": {
-    "assign-gingerly": "0.0.71",
-    "be-hive": "0.1.15",
+    "assign-gingerly": "0.0.72",
+    "be-hive": "0.1.16",
     "mount-observer": "0.1.43",
     "roundabout-lib": "0.0.30",
-    "nested-regex-groups": "0.0.7"
+    "nested-regex-groups": "0.0.8"
   },
   "exports": {
     "./*": "./*.js",

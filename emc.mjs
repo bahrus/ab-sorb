@@ -27,7 +27,10 @@ export const emc = {
                 mapsTo: 'soakUpRules',
                 parser: 'parse-pattern-statements',
                 instanceOf: 'Array',
-                parserConfig: parsePatterns
+                parserConfig: parsePatterns,
+                parserOptions: {
+                    normalizeWhitespace: true,
+                }
             }
         }
     },
