@@ -53,8 +53,13 @@ class SoakUp {
         /** @type {SoakUpRule[]} */
         const parsedRules = [];
         for(const statement of statements){
-            const {value} = statement;
-            if(!value) continue;
+            const {value, error} = statement;
+            if(!value) {
+                if(error) {
+                    console.error(error);
+                }
+                continue;
+            }
             const {propMap, sourceSpecifierString} = value;
             /** @type {PropMap[]} */
             const parsedPropMap = [];
@@ -88,7 +93,7 @@ class SoakUp {
         if(wc === null) throw 404;
         const {localName} = wc;
         if(!localName.includes('-')) throw 404;
-        await customElements.whenDefined(wc.localName);
+        await customElements.whenDefined(localName);
         for(const rule of parsedRules){
             const {sourceSpecifierString, parsedPropMap} = rule;
             const source = findSource(enhancedElement, sourceSpecifierString);

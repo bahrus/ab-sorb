@@ -19,7 +19,7 @@ const parsePatterns = [
  */
 export const emc = {
     enhConfig: {
-        enhKey: 'SoakUp',
+        enhKey: 'soakUp',
         spawn: 'soak-up/soak-up.js',
         withAttrs: {
             base: 'soak-up',
