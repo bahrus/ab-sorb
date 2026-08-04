@@ -12,6 +12,8 @@
   "description": "Absorb temporary light children into the upgraded schema",
   "files": [
     "*.js",
+    "*.json",
+    "*.mjs",
     "./types/soak-up/types.d.ts",
     "README.md"
   ],
