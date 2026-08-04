@@ -84,11 +84,10 @@ class SoakUp {
     async hydrate(self){
         const {parsedRules, enhancedElement} = self;
         // find the web component host - walk up until we find a custom element
-        let wc = enhancedElement.parentElement;
-        while(wc && !wc.localName.includes('-')){
-            wc = wc.parentElement;
-        }
+        const wc = enhancedElement.slot ? enhancedElement.parentElement : enhancedElement;
         if(wc === null) throw 404;
+        const {localName} = wc;
+        if(!localName.includes('-')) throw 404;
         await customElements.whenDefined(wc.localName);
         for(const rule of parsedRules){
             const {sourceSpecifierString, parsedPropMap} = rule;
